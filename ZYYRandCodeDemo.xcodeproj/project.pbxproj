@@ -15,6 +15,8 @@
 		106227AC1F0C9A5400E2E586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106227AA1F0C9A5400E2E586 /* LaunchScreen.storyboard */; };
 		106227B71F0C9A5400E2E586 /* ZYYRandCodeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 106227B61F0C9A5400E2E586 /* ZYYRandCodeDemoTests.m */; };
 		106227C21F0C9A5400E2E586 /* ZYYRandCodeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 106227C11F0C9A5400E2E586 /* ZYYRandCodeDemoUITests.m */; };
+		106227D11F0CB8DB00E2E586 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106227D01F0CB8DB00E2E586 /* NextViewController.m */; };
+		106227D41F0CB8FD00E2E586 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106227D31F0CB8FD00E2E586 /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		106227BD1F0C9A5400E2E586 /* ZYYRandCodeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYYRandCodeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		106227C11F0C9A5400E2E586 /* ZYYRandCodeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYYRandCodeDemoUITests.m; sourceTree = "<group>"; };
 		106227C31F0C9A5400E2E586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		106227CF1F0CB8DB00E2E586 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		106227D01F0CB8DB00E2E586 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		106227D21F0CB8FD00E2E586 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		106227D31F0CB8FD00E2E586 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +109,12 @@
 			children = (
 				1062279F1F0C9A5400E2E586 /* AppDelegate.h */,
 				106227A01F0C9A5400E2E586 /* AppDelegate.m */,
+				106227D21F0CB8FD00E2E586 /* BaseViewController.h */,
+				106227D31F0CB8FD00E2E586 /* BaseViewController.m */,
 				106227A21F0C9A5400E2E586 /* ViewController.h */,
 				106227A31F0C9A5400E2E586 /* ViewController.m */,
+				106227CF1F0CB8DB00E2E586 /* NextViewController.h */,
+				106227D01F0CB8DB00E2E586 /* NextViewController.m */,
 				106227A51F0C9A5400E2E586 /* Main.storyboard */,
 				106227A81F0C9A5400E2E586 /* Assets.xcassets */,
 				106227AA1F0C9A5400E2E586 /* LaunchScreen.storyboard */,
@@ -277,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				106227A41F0C9A5400E2E586 /* ViewController.m in Sources */,
+				106227D41F0CB8FD00E2E586 /* BaseViewController.m in Sources */,
+				106227D11F0CB8DB00E2E586 /* NextViewController.m in Sources */,
 				106227A11F0C9A5400E2E586 /* AppDelegate.m in Sources */,
 				1062279E1F0C9A5400E2E586 /* main.m in Sources */,
 			);
@@ -427,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4G3GS9D6JL;
 				INFOPLIST_FILE = ZYYRandCodeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zyy.ZYYRandCodeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4G3GS9D6JL;
 				INFOPLIST_FILE = ZYYRandCodeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zyy.ZYYRandCodeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

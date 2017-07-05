@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NextViewController.h
 //  ZYYRandCodeDemo
 //
 //  Created by liguo.chen on 17/7/5.
@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface ViewController : BaseViewController
-
+@interface NextViewController : BaseViewController
 
 @end
-
