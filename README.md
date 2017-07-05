@@ -45,3 +45,62 @@
         [self.reAskCode setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     }
 思路就是这个思路,如果有好的方法,希望可以告诉我一下,非常感谢.
+
+另外里面也整理了一些公共方法,在BaseViewController里面,方便调用.
+
+    //设置返回按钮标题
+    - (void)setBackBarButtonItemWithTitle:(NSString *)title {
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
+        [btn setTitle:title forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor clearColor]];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"NavBackSorrow"] forState:UIControlStateNormal];
+        [btn setContentMode:UIViewContentModeScaleAspectFill];
+        [btn setImageEdgeInsets:UIEdgeInsetsMake(0, -7, 0, 50)];
+        [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, -5, 0, 10)];
+        [btn addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        self.navigationItem.leftBarButtonItem = barButtonItem;
+    }
+
+    //返回按钮点击事件
+    -(void)backAction:(id)sender {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    //设置导航栏标题
+    -(void)setNaviTitle:(NSString *)title {
+        self.navigationItem.title = title;
+    }
+
+    //设置背景颜色,导航栏颜色,导航栏字体颜色和字体大小,导航栏是否透明等,如果有需要设置其他的,可以私信我
+    -(void)setViewAndNavi {
+    
+        [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+        self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    
+        [self.navigationController.navigationBar setTitleTextAttributes:
+     
+         @{NSFontAttributeName:[UIFont systemFontOfSize:18],
+       
+           NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+        self.navigationController.navigationBar.translucent = NO;//导航栏呈现半透明状态的属性,NO为不透明,YES为透明
+    
+        //去掉导航栏下面的黑线
+        for (UIView *view in self.navigationController.navigationBar.subviews) {
+            for (UIView *subview in view.subviews) {
+                if (subview.bounds.size.height <= 1 ) {
+                    NSLog(@"%f", subview.bounds.size.height);
+                    [subview removeFromSuperview];
+                }
+            }
+        }
+    
+    }
+
+    //展示alert对话框提示
+    -(void)showAlertView:(NSString *)msgStr {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:msgStr delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+    }
